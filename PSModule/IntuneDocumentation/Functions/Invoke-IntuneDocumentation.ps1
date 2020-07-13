@@ -43,7 +43,8 @@ Function Invoke-IntuneDocumentation(){
             return $true 
         })]
         [System.IO.FileInfo]$FullDocumentationPath = ".\IntuneDocumentation.docx",
-        [switch]$UseTranslationBeta
+        [switch]$UseTranslationBeta,
+        $ClientSecret
 
     )
     ## Manual Variable Definition
@@ -62,7 +63,7 @@ Function Invoke-IntuneDocumentation(){
     Write-Log "Start Script $Scriptname"
     #region Authentication
     Write-host "totoooo";
-    Connect-MSGraph
+    Connect-MSGraph -ClientSecret $ClientSecret
     #endregion
     #region Main Script
     ########################################################
