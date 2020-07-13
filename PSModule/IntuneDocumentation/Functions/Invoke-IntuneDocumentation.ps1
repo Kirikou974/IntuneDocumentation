@@ -61,6 +61,7 @@ Function Invoke-IntuneDocumentation(){
     ########################################################
     Write-Log "Start Script $Scriptname"
     #region Authentication
+    Write-host "totoooo";
     Connect-MSGraph
     #endregion
     #region Main Script
